@@ -9,6 +9,12 @@ Jenkins Pipeline to build the kubernetes cluster is configured to be executed ev
 ## Reference Materials
 [Provision a GKE Cluster (Google Cloud)](https://developer.hashicorp.com/terraform/tutorials/kubernetes/gke?utm_medium=WEB_IO&in=terraform%2Fkubernetes&utm_offer=ARTICLE_PAGE&utm_source=WEBSITE&utm_content=DOCS)
 
+## Connecting to kubernetes API Server
+
+```shell
+gcloud container clusters get-credentials CLUSTER_NAME --region=REGION_NAME
+```
+
 # Google Cloud Project Configuration
 
 ## Change GCP organization policy enforcements
