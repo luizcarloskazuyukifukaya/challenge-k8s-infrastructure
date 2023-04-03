@@ -1,0 +1,28 @@
+pipeline {
+
+  agent any
+  tools {
+    terraform 'terraform'
+  }
+
+  stages {
+
+    stage ('terraform version') {
+      steps {
+        sh ('terraform version')
+      }
+    }
+
+    stage ('terraform plan') {
+      steps {
+          sh 'terraform plan -destroy'
+      }
+    } 
+
+    stage ('terraform destroy') {
+      steps {
+          sh 'terraform destroy'
+      }
+    }   
+  }
+}
