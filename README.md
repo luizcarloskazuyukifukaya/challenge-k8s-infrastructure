@@ -2,7 +2,7 @@
 
 This document includes details related to the production infrastructure based on Google Kubernetes Engine (GKE).
 
-Jenkins Pipeline to build the kubernetes cluster is configured to be executed every 5 minutes if there is a change in the GitHub.
+Jenkins Pipeline to build the kubernetes cluster is configured to be executed every 30 minutes if there is a change in the GitHub. Again, at this point, due to the demo, the GKE deployment is not considering the lifecycle of the application that is deployed on the kubernetes itself. In the real operation, it is important to consider how the approval process should be implemented so there is not incident where the kubernetes cluster is destroyed while still the application is running.
 
 # Provision a kubernetes cluster for production
 
